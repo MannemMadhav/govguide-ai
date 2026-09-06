@@ -1,6 +1,7 @@
 # GovGuide AI
 
 **Knowledge-Graph-Grounded Agentic RAG with Hallucination Verification**
+Deployment link:https://gov-guide-ai--madhav1010.replit.app/schemes/stand-up-india
 
 GovGuide AI is a demo-first academic/research prototype that helps people discover government welfare schemes, understand eligibility, and review evidence-backed guidance in a clear, conversational interface.
 
