@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "GovGuide AI"
+description = "A demo-first government scheme discovery platform with an evidence-grounded AI assistant, knowledge graph explorer, eligibility guidance, and responsive research prototype experience."
+version = "1.0.0"
+id = "artifacts/govguide-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 22897
+
+[services.development]
+run = "pnpm --filter @workspace/govguide-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/govguide-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/govguide-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22897"
+BASE_PATH = "/"
